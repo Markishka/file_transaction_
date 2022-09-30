@@ -112,10 +112,6 @@ int main(int argc, char* argv[])
     while (true) {
         getline(cin, msg2);
         int msg_size1 = msg2.size();
-        send(Connection, (char*)&msg_size1, sizeof(int), NULL);
-        send(Connection, msg2.c_str(), msg_size1, NULL);
-        Sleep(10);
-        //send(Connection, conv_data.c_str(), sizeof(path), NULL);
         
          if (msg2 == "Exit") {
             cout << "You exited" << endl;
